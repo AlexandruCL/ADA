@@ -49,8 +49,11 @@ public class Main {
         Integer[] arr = integers.toArray(new Integer[0]);
         Sorter<Integer> intSorter = new NaturalSort<>();
 
+        long start = System.nanoTime();
         intSorter.sort(arr, Comparator.naturalOrder());
+        long end = System.nanoTime();
 
+        System.out.println("For natural Sort: " + (end - start) / 1000000000.0 + " seconds");
 //        For the persons
 
     }
